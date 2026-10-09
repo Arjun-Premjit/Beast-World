@@ -5,7 +5,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CHALLENGES_DATA, type Challenge } from '../data/challenges';
 import { POPULAR_VIDEOS, type PopularVideo } from '../data/popularVideos';
-import { RealMrBeastExperience } from '../components/RealMrBeastExperience';
 import { AboutCreatorSection } from '../components/AboutCreatorSection';
 import { FastImage } from '../components/FastImage';
 import { ChallengeModal } from '../components/ChallengeModal';
@@ -311,10 +310,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. SIGNATURE FEATURE — REAL MRBEAST DOCUMENTARY EXPERIENCE */}
-      <section className="relative">
-        <RealMrBeastExperience />
-      </section>
+
 
       {/* 3. SECTION 01 — THE CHALLENGE ARCHIVE (EDITORIAL ASYMMETRIC GRID) */}
       <section id="challenge-archive" className="py-24 sm:py-32 px-6 sm:px-12 max-w-7xl mx-auto border-b border-[#3D3024]/10">
