@@ -1,0 +1,49 @@
+[
+  {
+    "id": "sub_1791512265240_0lr6j",
+    "challenge_name": "Escape 100 Escape Rooms in 24 Hours",
+    "category": "COMPETITION",
+    "description": "A labyrinth containing 100 unique miniature escape rooms. Every unlocked room deposits $10,000 into the prize vault.",
+    "why_great": "Pure adrenaline pacing, rapid visual variety, constant micro-victories, and huge escalating cash totals.",
+    "estimated_budget": "$1M - $3M",
+    "submitter_name": "Arjun P.",
+    "status": "pending_review",
+    "created_at": "2026-10-09T02:17:45.240Z"
+  },
+  {
+    "id": "sub_1791486616008_6ddku",
+    "challenge_name": "Survive 7 Days Inside a Giant Floating Bubble on the Ocean",
+    "category": "SURVIVAL",
+    "description": "5 competitors live in transparent 40-foot spheres anchored offshore. Ocean currents, supply drops, and motion challenges determine who lasts longest.",
+    "why_great": "Unbelievable thumbnail visual, claustrophobic stakes, high suspense with weather shifts, and instant hook for viewers worldwide.",
+    "estimated_budget": "$1M - $3M",
+    "submitter_name": "Kobe Tyler",
+    "submitter_email": "kobe@creator.org",
+    "status": "pending_review",
+    "created_at": "2026-10-08T19:10:16.008Z"
+  },
+  {
+    "id": "sub_seed_001",
+    "challenge_name": "Survive 48 Hours in an Automated Robot Factory",
+    "category": "SURVIVAL",
+    "description": "Contestants navigate an active automotive robotics assembly line where robotic arms move containers and unlock daily rations.",
+    "why_great": "The visual spectacle of industrial robotics combined with intense suspense creates massive retention and endless creative thumbnail moments.",
+    "estimated_budget": "$1,000,000+",
+    "submitter_name": "Liam Chen",
+    "submitter_email": "liam.c@creator.net",
+    "status": "shortlisted",
+    "created_at": "2026-10-04T19:10:03.173Z"
+  },
+  {
+    "id": "sub_seed_002",
+    "challenge_name": "Last To Leave The Subterranean Bank Vault",
+    "category": "MONEY",
+    "description": "10 contestants lock themselves inside a real bank vault with $1,000,000 in cash. Every 4 hours, a mysterious temptation box appears.",
+    "why_great": "Classic MrBeast endurance psychology where greed, paranoia, and physical discomfort battle for life-changing money.",
+    "estimated_budget": "$500,000 - $1,000,000",
+    "submitter_name": "Sarah Jenkins",
+    "submitter_email": "sarah.j@fan.org",
+    "status": "pending_review",
+    "created_at": "2026-10-06T19:10:03.173Z"
+  }
+]

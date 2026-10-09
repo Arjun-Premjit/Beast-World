@@ -1,0 +1,6 @@
+{
+  "name": "BEAST // WORLD — Enter the Challenge",
+  "description": "Enter the world of MrBeast. The definitive digital fan hub for extreme challenges, creator storytelling, global impact, and community.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

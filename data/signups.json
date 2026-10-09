@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sig_1791485925273_qr5vi",
+    "name": "Jimmy Enthusiast",
+    "email": "tester.beast@example.com",
+    "ageRange": "18-24",
+    "contentType": "High-Stakes Competitions",
+    "message": "Ready for the challenge!",
+    "createdAt": "2026-10-08T18:58:45.273Z"
+  },
+  {
+    "id": "sig_seed_001",
+    "name": "Marcus Vance",
+    "email": "marcus.v@fan.world",
+    "ageRange": "18-24",
+    "contentType": "Extreme Survival",
+    "message": "Following Jimmy since 2017. Ready for the next global challenge drop!",
+    "createdAt": "2026-10-05T18:58:33.693Z"
+  },
+  {
+    "id": "sig_seed_002",
+    "name": "Elena Rostova",
+    "email": "elena.r@fan.world",
+    "ageRange": "25-34",
+    "contentType": "Philanthropy & Giving",
+    "message": "Inspired by the clean water wells project. Want to contribute to community builds.",
+    "createdAt": "2026-10-06T18:58:33.693Z"
+  },
+  {
+    "id": "sig_seed_003",
+    "name": "Jordan Kai",
+    "email": "jordan.k@fan.world",
+    "ageRange": "18-24",
+    "contentType": "High-Stakes Competitions",
+    "message": "Huge fan of the tactical strategy challenges and escape rooms.",
+    "createdAt": "2026-10-07T18:58:33.693Z"
+  }
+]
