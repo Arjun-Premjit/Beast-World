@@ -104,99 +104,100 @@ export const SubmitChallenge: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pt-32 sm:pt-36 pb-24 px-6 sm:px-12 max-w-7xl mx-auto bg-[#070A10] text-[#F5F7FB]">
+    <div className="min-h-screen pt-32 sm:pt-36 pb-24 px-6 sm:px-12 max-w-7xl mx-auto bg-[#F4EFE6] text-[#1C1814]">
       {/* Editorial Header */}
-      <div className="border-b border-white/10 pb-12 mb-16 max-w-3xl">
-        <div className="flex items-center gap-2 text-xs font-mono text-[#00BCEB] tracking-widest uppercase mb-4">
+      <div className="border-b border-[#3D3024]/10 pb-12 mb-16 max-w-3xl">
+        <div className="flex items-center gap-2 text-xs font-mono text-[#FF3D91] tracking-widest uppercase mb-4 font-bold">
           <span>PRODUCTION BRAINSTORM PORTAL</span>
           <span>/</span>
           <span>DATABASE INTAKE</span>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-light tracking-tight text-[#F5F7FB] uppercase font-display leading-[0.95]">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-light tracking-tight text-[#1C1814] uppercase font-display leading-[0.95]">
           PITCH A CHALLENGE <br />
-          <span className="font-extrabold text-[#087BFA]">CONCEPT.</span>
+          <span className="font-extrabold text-[#FF3D91]">CONCEPT.</span>
         </h1>
 
-        <p className="text-xs sm:text-sm text-[#AAB4C2] mt-4 leading-relaxed font-normal">
-          Have an extreme concept Jimmy hasn't tackled yet? Pitch your wildest ideas directly to the Beast production team. Submissions are saved into the official <code className="text-[#00BCEB] font-mono">challenge_submissions</code> table.
+        <p className="text-xs sm:text-sm text-[#61554A] mt-4 leading-relaxed font-normal">
+          Have an extreme concept Jimmy hasn't tackled yet? Pitch your wildest ideas directly to the Beast production team. Submissions are saved into the official <code className="text-[#FF3D91] font-mono font-bold bg-[#FF3D91]/10 px-1.5 py-0.5 rounded">challenge_submissions</code> table.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl">
         {/* Form Container */}
-        <div className="lg:col-span-7 rounded-3xl glass-panel border border-white/15 p-6 sm:p-10 shadow-2xl">
+        <div className="lg:col-span-7 rounded-3xl bg-white border border-[#3D3024]/12 p-6 sm:p-10 shadow-xl">
           {status === 'success' && successData ? (
             /* Success State */
             <div className="py-10 text-center space-y-6">
-              <div className="w-12 h-12 mx-auto rounded-full bg-[#087BFA]/20 border border-[#00BCEB] flex items-center justify-center text-[#00BCEB]">
-                <CheckCircle2 className="w-6 h-6" />
+              <div className="w-14 h-14 mx-auto rounded-full bg-[#FF3D91]/15 border border-[#FF3D91] flex items-center justify-center text-[#FF3D91]">
+                <CheckCircle2 className="w-7 h-7" />
               </div>
 
               <div>
-                <h2 className="text-2xl sm:text-3xl font-light text-[#F5F7FB] font-display uppercase tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-light text-[#1C1814] font-display uppercase tracking-tight">
                   CHALLENGE VAULTED.
                 </h2>
-                <p className="text-xs font-mono text-[#00BCEB] mt-1">
+                <p className="text-xs font-mono text-[#FF3D91] mt-1 font-bold">
                   SUBMISSION ID: {successData.id}
                 </p>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[#101826] border border-white/10 text-left space-y-2 text-xs text-[#AAB4C2]">
-                <div className="border-b border-white/10 pb-2">
-                  <span className="font-mono text-[10px] text-neutral-500 block">Challenge Title</span>
-                  <span className="font-semibold text-[#F5F7FB] text-sm font-display">{successData.challenge_name}</span>
+              <div className="p-5 rounded-2xl bg-[#FAF5ED] border border-[#3D3024]/10 text-left space-y-2 text-xs text-[#61554A]">
+                <div className="border-b border-[#3D3024]/10 pb-2">
+                  <span className="font-mono text-[10px] text-[#8C7E72] block">Challenge Title</span>
+                  <span className="font-bold text-[#1C1814] text-sm font-display">{successData.challenge_name}</span>
                 </div>
-                <div className="flex justify-between border-b border-white/10 pb-1.5">
-                  <span className="font-mono text-[#AAB4C2]">Category</span>
-                  <span className="font-semibold text-[#F5F7FB]">{successData.category}</span>
+                <div className="flex justify-between border-b border-[#3D3024]/10 pb-1.5">
+                  <span className="font-mono text-[#8C7E72]">Category</span>
+                  <span className="font-bold text-[#FF3D91]">{successData.category}</span>
                 </div>
-                <div className="flex justify-between border-b border-white/10 pb-1.5">
-                  <span className="font-mono text-[#AAB4C2]">Budget Tier</span>
-                  <span className="font-semibold text-[#F5F7FB]">{successData.estimated_budget}</span>
+                <div className="flex justify-between border-b border-[#3D3024]/10 pb-1.5">
+                  <span className="font-mono text-[#8C7E72]">Budget Tier</span>
+                  <span className="font-medium text-[#1C1814]">{successData.estimated_budget}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-mono text-[#AAB4C2]">Storage Table</span>
-                  <span className="font-mono font-semibold text-[#00BCEB]">challenge_submissions</span>
+                  <span className="font-mono text-[#8C7E72]">Vault Status</span>
+                  <span className="font-bold text-[#FF3D91] font-mono">CONFIRMED IN SQL DATABASE</span>
                 </div>
               </div>
 
-              <p className="text-xs text-[#AAB4C2] leading-relaxed">
-                Your pitch has been recorded in the database. Our creative directors and challenge engineers review submissions weekly.
+              <p className="text-xs text-[#61554A] leading-relaxed">
+                Your pitch is logged into the production queue. If the team greenlights this setup, we will review the safety and build requirements.
               </p>
 
               <button
                 onClick={handleReset}
-                className="px-6 py-2.5 rounded-full text-xs font-bold uppercase font-mono tracking-wider text-white bg-gradient-to-r from-[#087BFA] to-[#00BCEB] hover:opacity-90 transition-opacity"
+                className="px-7 py-3 rounded-full text-xs font-bold uppercase font-mono tracking-wider text-white bg-gradient-to-r from-[#FF3D91] via-[#FF2680] to-[#E60067] hover:from-[#E60067] hover:to-[#FF3D91] transition-all shadow-[0_4px_16px_rgba(255,61,145,0.4)]"
               >
-                PITCH ANOTHER CHALLENGE
+                SUBMIT ANOTHER CONCEPT
               </button>
             </div>
           ) : (
-            /* Active Form */
+            /* Pitch Form */
             <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-              <div className="border-b border-white/10 pb-4">
-                <h2 className="text-base font-semibold text-[#F5F7FB] font-display uppercase tracking-wider">
-                  PRODUCTION SUBMISSION FORM
+              <div className="border-b border-[#3D3024]/10 pb-4">
+                <h2 className="text-base font-semibold text-[#1C1814] font-display uppercase tracking-wider">
+                  PRODUCTION CONCEPT DOSSIER
                 </h2>
-                <p className="text-xs text-[#AAB4C2] mt-0.5 font-normal">
-                  Vaulted in the <code className="text-[#00BCEB] font-mono">challenge_submissions</code> table.
+                <p className="text-xs text-[#61554A] mt-0.5 font-normal">
+                  All fields marked with an asterisk are required.
                 </p>
               </div>
 
+              {/* Error Banner */}
               {status === 'error' && (
-                <div className="p-3.5 rounded-xl bg-red-950/40 border border-red-500/40 flex items-start gap-2.5 text-xs text-red-200">
-                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-red-400" />
+                <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 flex items-start gap-2.5 text-xs text-red-700">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-red-500" />
                   <div>
-                    <span className="font-semibold">Pitch error: </span>
+                    <span className="font-semibold">Submission failed: </span>
                     <span>{errorMessage}</span>
                   </div>
                 </div>
               )}
 
-              {/* Challenge Title */}
+              {/* Challenge Name */}
               <div>
-                <label htmlFor="challengeName" className="block text-xs font-mono uppercase text-[#F5F7FB] mb-1.5 font-medium">
+                <label htmlFor="challengeName" className="block text-xs font-mono uppercase text-[#1C1814] mb-1.5 font-bold">
                   Challenge Title *
                 </label>
                 <input
@@ -207,61 +208,62 @@ export const SubmitChallenge: React.FC = () => {
                     setChallengeName(e.target.value);
                     if (errors.challengeName) setErrors({ ...errors, challengeName: '' });
                   }}
-                  placeholder="e.g. Surviving 7 Days in an Abandoned Nuclear Bunker"
+                  placeholder="e.g. 100 Days Inside a Submarine Vault"
                   disabled={status === 'submitting'}
-                  className={`w-full px-4 py-2.5 rounded-xl bg-[#101826] border text-xs sm:text-sm text-[#F5F7FB] placeholder-neutral-500 focus:outline-none transition-colors ${
-                    errors.challengeName ? 'border-red-500' : 'border-white/15 focus:border-[#00BCEB]'
+                  className={`w-full px-4 py-2.5 rounded-xl bg-[#FAF5ED] border text-xs sm:text-sm text-[#1C1814] placeholder-[#8C7E72] focus:outline-none transition-colors ${
+                    errors.challengeName ? 'border-red-500' : 'border-[#3D3024]/15 focus:border-[#FF3D91]'
                   }`}
                 />
                 {errors.challengeName && (
-                  <p className="text-xs text-red-400 mt-1 font-mono">{errors.challengeName}</p>
+                  <p className="text-xs text-red-500 mt-1 font-mono">{errors.challengeName}</p>
                 )}
               </div>
 
-              {/* Category & Budget */}
+              {/* Category & Budget Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="category" className="block text-xs font-mono uppercase text-[#F5F7FB] mb-1.5 font-medium">
-                    Category
+                  <label htmlFor="category" className="block text-xs font-mono uppercase text-[#1C1814] mb-1.5 font-bold">
+                    Category Focus
                   </label>
                   <select
                     id="category"
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
                     disabled={status === 'submitting'}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#101826] border border-white/15 text-xs sm:text-sm text-[#F5F7FB] focus:outline-none focus:border-[#00BCEB]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF5ED] border border-[#3D3024]/15 text-xs sm:text-sm text-[#1C1814] focus:outline-none focus:border-[#FF3D91]"
                   >
-                    <option value="COMPETITION">High-Stakes Competition</option>
+                    <option value="COMPETITION">Competition</option>
+                    <option value="GIVEAWAYS">Giveaways</option>
                     <option value="SURVIVAL">Extreme Survival</option>
-                    <option value="GIVEAWAYS">Giveaway & Bank Vault</option>
                     <option value="TEAM">Team Gauntlet</option>
-                    <option value="COMMUNITY">Philanthropic Build</option>
+                    <option value="COMMUNITY">Community / Global</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="budget" className="block text-xs font-mono uppercase text-[#F5F7FB] mb-1.5 font-medium">
-                    Estimated Scale
+                  <label htmlFor="estimatedBudget" className="block text-xs font-mono uppercase text-[#1C1814] mb-1.5 font-bold">
+                    Estimated Production Budget
                   </label>
                   <select
-                    id="budget"
+                    id="estimatedBudget"
                     value={estimatedBudget}
                     onChange={(e) => setEstimatedBudget(e.target.value)}
                     disabled={status === 'submitting'}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#101826] border border-white/15 text-xs sm:text-sm text-[#F5F7FB] focus:outline-none focus:border-[#00BCEB]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF5ED] border border-[#3D3024]/15 text-xs sm:text-sm text-[#1C1814] focus:outline-none focus:border-[#FF3D91]"
                   >
-                    <option value="$250K - $500K">$250K — $500K</option>
-                    <option value="$500K - $1M">$500K — $1,000,000</option>
-                    <option value="$1M - $3M">$1M — $3,000,000</option>
-                    <option value="$5,000,000+ Extreme">$5,000,000+ (Extreme Stadium Scale)</option>
+                    <option value="Under $250K">Under $250K</option>
+                    <option value="$250K - $500K">$250K - $500K</option>
+                    <option value="$500K - $1M">$500K - $1M</option>
+                    <option value="$1M - $3M">$1M - $3M</option>
+                    <option value="$3M+">$3M+ (Mega-Scale)</option>
                   </select>
                 </div>
               </div>
 
               {/* Description */}
               <div>
-                <label htmlFor="description" className="block text-xs font-mono uppercase text-[#F5F7FB] mb-1.5 font-medium">
-                  Challenge Description & Rules *
+                <label htmlFor="description" className="block text-xs font-mono uppercase text-[#1C1814] mb-1.5 font-bold">
+                  The Rules & Mechanics *
                 </label>
                 <textarea
                   id="description"
@@ -271,21 +273,21 @@ export const SubmitChallenge: React.FC = () => {
                     if (errors.description) setErrors({ ...errors, description: '' });
                   }}
                   rows={4}
-                  placeholder="Detail the setup, how contestants get eliminated, what obstacles they face, and any crazy midpoint twists..."
                   disabled={status === 'submitting'}
-                  className={`w-full px-4 py-2.5 rounded-xl bg-[#101826] border text-xs sm:text-sm text-[#F5F7FB] placeholder-neutral-500 focus:outline-none resize-none ${
-                    errors.description ? 'border-red-500' : 'border-white/15 focus:border-[#00BCEB]'
+                  placeholder="Detail the exact elimination criteria, physical barriers, timeline, and prize structure..."
+                  className={`w-full px-4 py-2.5 rounded-xl bg-[#FAF5ED] border text-xs sm:text-sm text-[#1C1814] placeholder-[#8C7E72] focus:outline-none resize-none ${
+                    errors.description ? 'border-red-500' : 'border-[#3D3024]/15 focus:border-[#FF3D91]'
                   }`}
                 />
                 {errors.description && (
-                  <p className="text-xs text-red-400 mt-1 font-mono">{errors.description}</p>
+                  <p className="text-xs text-red-500 mt-1 font-mono">{errors.description}</p>
                 )}
               </div>
 
               {/* Why Great */}
               <div>
-                <label htmlFor="whyGreat" className="block text-xs font-mono uppercase text-[#00BCEB] mb-1.5 font-medium">
-                  Why would this be a great MrBeast challenge? *
+                <label htmlFor="whyGreat" className="block text-xs font-mono uppercase text-[#1C1814] mb-1.5 font-bold">
+                  Why Will Viewers Stay Glued? *
                 </label>
                 <textarea
                   id="whyGreat"
@@ -295,21 +297,21 @@ export const SubmitChallenge: React.FC = () => {
                     if (errors.whyGreat) setErrors({ ...errors, whyGreat: '' });
                   }}
                   rows={3}
-                  placeholder="Why does this fit Jimmy's style? What makes the thumbnail clickable? How does it keep 100M+ viewers glued to the screen?"
                   disabled={status === 'submitting'}
-                  className={`w-full px-4 py-2.5 rounded-xl bg-[#101826] border text-xs sm:text-sm text-[#F5F7FB] placeholder-neutral-500 focus:outline-none resize-none ${
-                    errors.whyGreat ? 'border-red-500' : 'border-white/15 focus:border-[#00BCEB]'
+                  placeholder="What is the psychological twist or escalating stake that prevents viewers from clicking away?"
+                  className={`w-full px-4 py-2.5 rounded-xl bg-[#FAF5ED] border text-xs sm:text-sm text-[#1C1814] placeholder-[#8C7E72] focus:outline-none resize-none ${
+                    errors.whyGreat ? 'border-red-500' : 'border-[#3D3024]/15 focus:border-[#FF3D91]'
                   }`}
                 />
                 {errors.whyGreat && (
-                  <p className="text-xs text-red-400 mt-1 font-mono">{errors.whyGreat}</p>
+                  <p className="text-xs text-red-500 mt-1 font-mono">{errors.whyGreat}</p>
                 )}
               </div>
 
               {/* Submitter Name & Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="submitterName" className="block text-xs font-mono uppercase text-[#F5F7FB] mb-1.5 font-medium">
+                  <label htmlFor="submitterName" className="block text-xs font-mono uppercase text-[#1C1814] mb-1.5 font-bold">
                     Your Name / Handle
                   </label>
                   <input
@@ -319,12 +321,12 @@ export const SubmitChallenge: React.FC = () => {
                     onChange={(e) => setSubmitterName(e.target.value)}
                     placeholder="e.g. Jordan (@jordankai)"
                     disabled={status === 'submitting'}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#101826] border border-white/15 text-xs sm:text-sm text-[#F5F7FB] placeholder-neutral-500 focus:outline-none focus:border-[#00BCEB]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF5ED] border border-[#3D3024]/15 text-xs sm:text-sm text-[#1C1814] placeholder-[#8C7E72] focus:outline-none focus:border-[#FF3D91]"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="submitterEmail" className="block text-xs font-mono uppercase text-[#F5F7FB] mb-1.5 font-medium">
+                  <label htmlFor="submitterEmail" className="block text-xs font-mono uppercase text-[#1C1814] mb-1.5 font-bold">
                     Contact Email (Optional)
                   </label>
                   <input
@@ -337,21 +339,21 @@ export const SubmitChallenge: React.FC = () => {
                     }}
                     placeholder="e.g. jordan@example.com"
                     disabled={status === 'submitting'}
-                    className={`w-full px-4 py-2.5 rounded-xl bg-[#101826] border text-xs sm:text-sm text-[#F5F7FB] placeholder-neutral-500 focus:outline-none ${
-                      errors.submitterEmail ? 'border-red-500' : 'border-white/15 focus:border-[#00BCEB]'
+                    className={`w-full px-4 py-2.5 rounded-xl bg-[#FAF5ED] border text-xs sm:text-sm text-[#1C1814] placeholder-[#8C7E72] focus:outline-none ${
+                      errors.submitterEmail ? 'border-red-500' : 'border-[#3D3024]/15 focus:border-[#FF3D91]'
                     }`}
                   />
                   {errors.submitterEmail && (
-                    <p className="text-xs text-red-400 mt-1 font-mono">{errors.submitterEmail}</p>
+                    <p className="text-xs text-red-500 mt-1 font-mono">{errors.submitterEmail}</p>
                   )}
                 </div>
               </div>
 
-              {/* Submit Button with Rounded Pill */}
+              {/* Submit Button with Panther Pink */}
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-gradient-to-r from-[#087BFA] to-[#00BCEB] hover:opacity-90 text-white text-xs font-bold uppercase font-mono tracking-wider transition-all disabled:opacity-50 shadow-[0_0_20px_rgba(8,123,250,0.3)]"
+                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-gradient-to-r from-[#FF3D91] via-[#FF2680] to-[#E60067] hover:from-[#E60067] hover:to-[#FF3D91] text-white text-xs font-bold uppercase font-mono tracking-wider transition-all disabled:opacity-50 shadow-[0_4px_18px_rgba(255,61,145,0.4)] hover:scale-[1.01] active:scale-[0.99]"
               >
                 {status === 'submitting' ? (
                   <span>TRANSMITTING TO CHALLENGE_SUBMISSIONS...</span>
@@ -368,36 +370,36 @@ export const SubmitChallenge: React.FC = () => {
 
         {/* Right Column: Blueprint & Live Feed */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="rounded-3xl glass-panel border border-white/15 p-6 sm:p-8 space-y-4 shadow-xl">
-            <span className="text-xs font-mono text-[#00BCEB] uppercase tracking-widest font-semibold block">
+          <div className="rounded-3xl bg-white border border-[#3D3024]/12 p-6 sm:p-8 space-y-4 shadow-xl">
+            <span className="text-xs font-mono text-[#FF3D91] uppercase tracking-widest font-bold block">
               THE VIRAL BENCHMARK
             </span>
-            <h3 className="text-xl font-light text-[#F5F7FB] font-display">
+            <h3 className="text-xl font-light text-[#1C1814] font-display">
               WHAT MAKES A 100M+ CHALLENGE?
             </h3>
-            <ul className="space-y-3 text-xs text-[#AAB4C2] leading-relaxed">
+            <ul className="space-y-3 text-xs text-[#61554A] leading-relaxed">
               <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00BCEB] mt-1.5 shrink-0" />
-                <span><strong className="text-white">Instant Visual Hook:</strong> The premise must be immediately obvious from a single glance at the thumbnail.</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF3D91] mt-1.5 shrink-0" />
+                <span><strong className="text-[#1C1814]">Instant Visual Hook:</strong> The premise must be immediately obvious from a single glance at the thumbnail.</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00BCEB] mt-1.5 shrink-0" />
-                <span><strong className="text-white">Escalating Stakes:</strong> The stakes and difficulty must double every couple of minutes so tension never drops.</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF3D91] mt-1.5 shrink-0" />
+                <span><strong className="text-[#1C1814]">Escalating Stakes:</strong> The stakes and difficulty must double every couple of minutes so tension never drops.</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00BCEB] mt-1.5 shrink-0" />
-                <span><strong className="text-white">Unscripted Payoff:</strong> Everyday contestants whose lives genuinely change upon winning.</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF3D91] mt-1.5 shrink-0" />
+                <span><strong className="text-[#1C1814]">Unscripted Payoff:</strong> Everyday contestants whose lives genuinely change upon winning.</span>
               </li>
             </ul>
           </div>
 
-          <div className="rounded-3xl glass-panel border border-white/15 p-6 sm:p-8 space-y-4 shadow-xl">
-            <div className="flex items-center justify-between border-b border-white/10 pb-3">
-              <div className="flex items-center gap-2 text-xs font-mono text-[#00BCEB] uppercase font-semibold">
-                <Layers className="w-4 h-4 text-[#087BFA]" />
+          <div className="rounded-3xl bg-white border border-[#3D3024]/12 p-6 sm:p-8 space-y-4 shadow-xl">
+            <div className="flex items-center justify-between border-b border-[#3D3024]/10 pb-3">
+              <div className="flex items-center gap-2 text-xs font-mono text-[#FF3D91] uppercase font-bold">
+                <Layers className="w-4 h-4 text-[#FF3D91]" />
                 <span>RECENT VAULTED IDEAS</span>
               </div>
-              <span className="text-[10px] font-mono text-[#AAB4C2] bg-white/5 px-2.5 py-0.5 rounded-full border border-white/10">
+              <span className="text-[10px] font-mono text-[#8C7E72] bg-[#FAF5ED] px-2.5 py-0.5 rounded-full border border-[#3D3024]/10 font-semibold">
                 {feed?.totalSubmissions || 2} ENTRIES
               </span>
             </div>
@@ -407,27 +409,27 @@ export const SubmitChallenge: React.FC = () => {
                 feed.submissions.map((sub) => (
                   <div
                     key={sub.id}
-                    className="p-3.5 rounded-2xl bg-[#101826] border border-white/10 space-y-1 text-xs"
+                    className="p-3.5 rounded-2xl bg-[#FAF5ED] border border-[#3D3024]/10 space-y-1 text-xs"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="font-semibold text-[#F5F7FB] font-display truncate max-w-[200px]">
+                      <span className="font-bold text-[#1C1814] font-display truncate max-w-[200px]">
                         {sub.challenge_name}
                       </span>
-                      <span className="text-[10px] font-mono text-[#00BCEB]">
+                      <span className="text-[10px] font-mono text-[#FF3D91] font-bold">
                         {sub.category}
                       </span>
                     </div>
-                    <p className="text-[#AAB4C2] text-[11px] line-clamp-2">
+                    <p className="text-[#61554A] text-[11px] line-clamp-2">
                       "{sub.why_great}"
                     </p>
-                    <div className="flex items-center justify-between text-[10px] text-neutral-400 font-mono pt-1">
+                    <div className="flex items-center justify-between text-[10px] text-[#8C7E72] font-mono pt-1">
                       <span>By {sub.submitter_name}</span>
                       <span>{sub.time_ago}</span>
                     </div>
                   </div>
                 ))
               ) : (
-                <div className="text-xs text-[#AAB4C2] italic">
+                <div className="text-xs text-[#8C7E72] italic">
                   Synchronizing recent pitches...
                 </div>
               )}

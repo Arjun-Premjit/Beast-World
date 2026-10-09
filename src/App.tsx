@@ -32,7 +32,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col relative z-10 bg-[#070A10] text-[#F5F7FB] selection:bg-[#087BFA] selection:text-white">
+      <div className="min-h-screen flex flex-col relative z-10 bg-[#F4EFE6] text-[#1C1814] selection:bg-[#FF3D91] selection:text-white">
         <Navbar />
         <main className="flex-grow">
           <Routes>
